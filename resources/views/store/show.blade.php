@@ -25,7 +25,7 @@
         </h3>
         
         <p>
-            <a class= "btn btn-warning btn-block" href="#">Comprar<i class="fa fa-cart-plus fa-2x"></i></a>   
+            <a class= "btn btn-warning btn-block" href="{{ route('cart-add', $product->slug) }}">Comprar<i class="fa fa-cart-plus fa-2x"></i></a>   
         </p>
     </div>
      </div>

@@ -7,13 +7,13 @@
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01">
     <span class="navbar-toggler-icon"></span>
   </button>
- <a class="navbar-brand main-title" href="#"><h4>Stone MakeUp</h4></a>
+ <a class="navbar-brand main-title" href="{{ route('home') }}"><h4>Stone MakeUp</h4></a>
 </div>
 
   <div class="navbar-collapse collapse show" id="navbarColor01" style="">
    <p class="navbar-text"></p>
     <ul class="nav navbar-nav navbar-right">
-     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> 
+     <li><a href="{{ route('cart-show') }}"><i class="fa fa-shopping-cart"></i></a></li> 
         <li><a href="#">Conocenos</a></li>
         <li><a href="#">Contacto</a></li>
 
