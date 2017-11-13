@@ -10,6 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::bind('product', function($slug){
+  return App\Product::where('slug', $slug)->first();
+});
 
 Route::get('/', [
 	'as' => 'home',
@@ -53,6 +56,11 @@ Route::get('cart/update/{product}/{quantity}', [
    ]);
 
 
+Route::get('order-detail', [
+  'middleware' => 'auth:user',
+  'as' => 'order-detail',
+  'uses' => 'CartController@orderDetail'
+]);
 
 
 Route::group(['middleware' => ['web']], function () {

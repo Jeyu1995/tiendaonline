@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 	
 // Update item cart
-	$(".btn-update-item").on('click', function(e){
+$(".btn-update-item").on('click', function(e){
 		e.preventDefault();
 		
 		var id = $(this).data('id');
@@ -21,5 +21,4 @@ $(document).ready(function() {
 	});
 
 });
-
 
