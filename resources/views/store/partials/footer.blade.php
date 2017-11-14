@@ -38,9 +38,6 @@
 				<a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-instagram-square fa-2x"></i></a>
-			</li>
-			<li>
 				<a href="#"><i class="fa fa-youtube-square fa-2x"></i></a>
 			</li>
 			</ul>
