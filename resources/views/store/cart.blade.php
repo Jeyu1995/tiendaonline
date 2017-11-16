@@ -10,8 +10,7 @@
 			@if(count($cart))
 
 			<p>
-				<a href="{{ route('cart-trash') }}" class="btn btn-danger">
-					Vaciar carrito <i class="fa fa-trash"></i>
+				<a href="{{ route('cart-trash') }}" class="btn btn-danger"> Vaciar carrito <i class="fa fa-trash"></i>
 				</a>
 			</p>
 
@@ -73,8 +72,7 @@
 			@endif
 			<hr>
 			<p>
-				<a href="{{ route('home') }}" class="btn btn-primary">
-					<i class="fa fa-chevron-circle-left"></i> Seguir comprando
+				<a href="{{ route('home') }}" class="btn btn-primary"><i class="fa fa-chevron-circle-left"></i> Seguir comprando
 				</a>
 
 				<a href="{{ route('order-detail') }}" class="btn btn-primary">

@@ -8,7 +8,8 @@ $(document).ready(function() {
 	margin_bottom: 50,
 	single_column_breakpoint: 700
 
-	
+});
+
 // Update item cart
 $(".btn-update-item").on('click', function(e){
 		e.preventDefault();

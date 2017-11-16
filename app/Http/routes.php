@@ -10,6 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::group(['middleware' => ['web']], function () {
+
 Route::bind('product', function($slug){
   return App\Product::where('slug', $slug)->first();
 });
@@ -23,11 +25,9 @@ Route::get('/', [
 Route::get('product/{slug}', [
 	'as' => 'product-detail',
 	'uses' => 'StoreController@show'
-
 ]);
 
-// carrito
-
+// carrito -----
 
 Route::get('cart/show', [
       'as' => 'cart-show',
@@ -39,18 +39,17 @@ Route::get('cart/add/{product}', [
        'uses' => 'CartController@add'
    ]);
 
-
 Route::get('cart/delete/{product}', [
        'as' => 'cart-delete',
        'uses' => 'CartController@delete'
    ]);
 
-Route::get('cart/trash',[
+Route::get('cart/trash', [
     'as' => 'cart-trash',
     'uses' =>'CartController@trash'
 ]);
 
-Route::get('cart/update/{product}/{quantity}', [
+Route::get('cart/update/{product}/{quantity?}', [
        'as' => 'cart-update',
        'uses' => 'CartController@update'
    ]);
@@ -62,8 +61,5 @@ Route::get('order-detail', [
   'uses' => 'CartController@orderDetail'
 ]);
 
-
-Route::group(['middleware' => ['web']], function () {
-    //
 });
 
