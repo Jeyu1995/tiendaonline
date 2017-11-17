@@ -61,5 +61,39 @@ Route::get('order-detail', [
   'uses' => 'CartController@orderDetail'
 ]);
 
-});
 
+
+// Authentication routes...
+Route::get('auth/login', [
+  'as' => 'login-get',
+  'uses' => 'Auth\AuthController@getLogin'
+]);
+Route::post('auth/login', [
+  'as' => 'login-post',
+  'uses' => 'Auth\AuthController@postLogin'
+]);
+Route::get('auth/logout', [
+  'as' => 'logout',
+  'uses' => 'Auth\AuthController@getLogout'
+]);
+// Registration routes...
+Route::get('auth/register', [
+  'as' => 'register-get',
+  'uses' => 'Auth\AuthController@getRegister'
+]);
+Route::post('auth/register', [
+  'as' => 'register-post',
+  'uses' => 'Auth\AuthController@postRegister'
+]);
+
+
+
+
+
+
+
+
+
+
+
+});
