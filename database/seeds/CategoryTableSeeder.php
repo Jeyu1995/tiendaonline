@@ -24,7 +24,7 @@ class CategoryTableSeeder extends Seeder
             'name' => 'Rimeles',
             'slug' => 'rimeles',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, perferendis!',
-            'color'=> '#C1196D'
+            'color'=> '#445500'
           ]
         
         );
