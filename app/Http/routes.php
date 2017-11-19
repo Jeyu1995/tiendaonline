@@ -117,18 +117,25 @@ Route::get('cancelada', array(
 ));
 
 
-//Admin .......
+Route::group(['namespace' => 'Admin', 'middleware' => ['auth'], 'prefix' => 'admin'], function()
+{
 
-Route::get('admin/home', function(){
+  //Admin .......
+
+Route::get('home', function(){
 		return view('admin.home');
 	});
 
-	Route::resource('admin/category', 'Admin\CategoryController');
+	Route::resource('category', 'CategoryController');
 
 
+});
 
 
 
 
 
 });
+
+
+

@@ -25,6 +25,13 @@ class Authenticate
             }
         }
 
+        if($request->path()=='order-detail') return $next($request); 
+
+        if(auth()->user()->type != 'admin'){
+            $message = "Permiso denegado : Solo los administradores pueden entrar a esta seccion";
+            return redirect()->route('home')->with('message',$message); 
+        }
+
         return $next($request);
     }
 }

@@ -1,12 +1,14 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand main-title" href="#"><h4>Stone MakeUp</h4></a>
+      <a class="navbar-brand main-title" href="http://localhost:8000/admin/home"><h4>Stone MakeUp</h4></a>
     </div>
     <div class="navbar-collapse collapse show" id="bs-example-navbar-collapse-1">
       <p class="navbar-text"><i class="fa fa-dashboard"></i></p>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Categorias</a></li>
+        <li><a href="http://localhost:8000/admin/home">Admin home</a></li>
+
+          <li><a href="{{ route('admin.category.index') }}">Categorias</a></li>
         <li><a href="#">Productos</a></li>
         <li><a href="#">Pedidos</a></li>
         <li><a href="#">Usuarios</a></li>
