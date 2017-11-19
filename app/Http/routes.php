@@ -16,6 +16,11 @@ Route::bind('product', function($slug){
   return App\Product::where('slug', $slug)->first();
 });
 
+// Category dependency injection
+Route::bind('category', function($category){
+    return App\Category::find($category);
+});
+
 Route::get('/', [
 	'as' => 'home',
 	'uses' => 'StoreController@index'
@@ -112,6 +117,13 @@ Route::get('cancelada', array(
 ));
 
 
+//Admin .......
+
+Route::get('admin/home', function(){
+		return view('admin.home');
+	});
+
+	Route::resource('admin/category', 'Admin\CategoryController');
 
 
 
