@@ -217,6 +217,10 @@ class ComposerStaticInita200263bcbfa8be68cbd7fc3d55cc363
             array (
                 0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
             ),
+            'PayPal' => 
+            array (
+                0 => __DIR__ . '/..' . '/paypal/rest-api-sdk-php/lib',
+            ),
         ),
         'M' => 
         array (
@@ -255,6 +259,8 @@ class ComposerStaticInita200263bcbfa8be68cbd7fc3d55cc363
     public static $classMap = array (
         'CategoryTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoryTableSeeder.php',
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_07_164122_create_categories_table.php',
+        'CreateOrderItemsTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_19_004437_create_order_items_table.php',
+        'CreateOrdersTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_19_004420_create_orders_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateProductsTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_07_164632_create_products_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',

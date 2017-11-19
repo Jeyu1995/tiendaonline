@@ -16,6 +16,13 @@
 
 <body>
 
+@if(\Session::has('message'))
+		@include('store.partials.message')
+@endif
+@if(\Session::has('message-error'))
+		@include('store.partials.message-error')
+@endif
+
 @include('store.partials.nav')
 
 @yield('content')
